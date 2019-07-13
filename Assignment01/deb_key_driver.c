@@ -22,9 +22,9 @@ uint8_t get_key(uint8_t key_no)
 	else if (key_no == 2)
 		bit = 5;
 	
-	//check if the output's bit is set for the desired key
+	// return 1 if pressed and 0 if bounced
 	if (PINE & (1<<bit))
-		return 1;
-	else
 		return 0;
+	else
+		return 1;
 }
